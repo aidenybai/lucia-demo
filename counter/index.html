@@ -9,17 +9,23 @@
     <script src="https://unpkg.com/lucia"></script>
     <style>
       button {
-        width: 100%;
         font-size: 100%;
       }
     </style>
 
-    <title>Lucia Clicker Game</title>
+    <title>Lucia Counter Example</title>
   </head>
   <body>
     <div l-state="{ count: localStorage.count || 0 }">
-      <h3><i class="fas fa-location-arrow"></i>&nbsp;&nbsp;Lucia Clicker Game</h3>
-      <button @click="localStorage.count = ++this.count" l-text="this.count">0</button>
+      <h3>
+        <i class="fas fa-location-arrow"></i>&nbsp;&nbsp;Lucia Counter Example
+      </h3>
+      <button @click="localStorage.count = --this.count">
+        <i class="fas fa-minus"></i></button
+      >&nbsp; <b l-text="this.count"></b>&nbsp;
+      <button @click="localStorage.count = ++this.count">
+        <i class="fas fa-plus"></i>
+      </button>
     </div>
   </body>
 </html>
