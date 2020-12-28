@@ -1,38 +1,11 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <link
-      rel="stylesheet"
-      href="https://kit-pro.fontawesome.com/releases/v5.11.2/css/pro.min.css"
-    />
-    <link rel="stylesheet" href="./style.css" />
-    <script src="https://unpkg.com/lucia"></script>
+    <link rel="stylesheet" href="../style.css" />
 
-    <title>Lucia Todo App</title>
+    <title>Lucia Demos</title>
   </head>
   <body>
-    <div l-state="{ todo: JSON.parse(localStorage.todo || '[]'), task: '' }">
-      <h3><i class="far fa-clipboard-check"></i>&nbsp;&nbsp;Lucia Todo List</h3>
-      <form
-        @submit.prevent="this.todo.push(this.task); this.task = ''; localStorage.todo = JSON.stringify(this.todo)"
-      >
-        <input
-          l-model="this.task"
-          type="text"
-          placeholder="Enter your task..."
-          required
-        />
-      </form>
-      <ul l-for="task, i in this.todo">
-        <li>
-          <button
-            @click="this.todo.splice(this.i, 1); localStorage.todo = JSON.stringify(this.todo)"
-          >
-            <i class="fas fa-check"></i>
-          </button>
-          <span l-text="this.task"></span>
-        </li>
-      </ul>
-    </div>
+    <a href="/todo">Todo App</a>&nbsp;&nbsp;&nbsp;
+    <a href="/clicker">Clicker Game</a>&nbsp;&nbsp;&nbsp;
   </body>
 </html>

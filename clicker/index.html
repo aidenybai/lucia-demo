@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://kit-pro.fontawesome.com/releases/v5.11.2/css/pro.min.css"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://unpkg.com/lucia"></script>
+    <style>
+      button {
+        width: 100%;
+        font-size: 100%;
+      }
+    </style>
+
+    <title>Lucia Clicker Game</title>
+  </head>
+  <body>
+    <div l-state="{ count: localStorage.count || 0 }">
+      <h3><i class="fas fa-location-arrow"></i>&nbsp;&nbsp;Lucia Clicker Game</h3>
+      <button @click="localStorage.count = ++this.count" l-text="this.count">0</button>
+    </div>
+  </body>
+</html>
